@@ -38,7 +38,7 @@
 <a class="skip" href="/#main">Skip to content</a>
 <header><nav aria-label="Primary navigation" class="nav container">
 <a aria-label="NEXOR home" class="logo" href="/">NEXOR<i></i></a>
-<div class="navlinks"><a href="/">Home</a><a href="/#how-it-works">How It Works</a><a href="/#experiences">Experiences</a><a href="/#companies">For Companies</a><a href="/partners/">Become a Partner</a><a href="/contactus/">Contact</a></div>
+<div class="navlinks"><a href="/">Home</a><a href="/#how-it-works">How It Works</a><a href="/#experiences">Experiences</a><a href="/#companies">For Companies</a><a href="/partners/">Become a Partner</a><a href="/contactus/"></a></div>
 <div class="navright"><button aria-label="Toggle colour theme" class="icon-btn theme-toggle" title="Switch light/dark mode">☾</button><a class="btn primary" href="/experiences">Explore Experiences <span class="arrow">↗</span></a><button aria-expanded="false" aria-label="Open navigation" class="icon-btn menu-btn">☰</button></div>
 </nav><div class="mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/#how-it-works">How It Works</a><a href="/#experiences">Experiences</a><a href="/#companies">For Companies</a><a href="/partners/">Become a Partner</a><a href="/contactus/">Contact</a><a href="/experiences">Explore Experiences ↗</a></div></header>
 <main id="main"><div id="home" style="height:0"></div>
@@ -56,7 +56,7 @@
 <script>
 (() => {
  const root=document.documentElement, toggle=document.querySelector('.theme-toggle'), menuButton=document.querySelector('.menu-btn'), menu=document.querySelector('.mobile-menu');
- function updateTheme(){toggle.textContent=root.dataset.theme==='dark'?'☀':'☾';toggle.setAttribute('aria-label',root.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode')}
+ function updateTheme(){toggle.textContent=root.dataset.theme==='dark'?'':'';toggle.setAttribute('aria-label',root.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode')}
  updateTheme();toggle.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('nexor-theme',root.dataset.theme)}catch(e){}updateTheme()});
  menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰'});
  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
