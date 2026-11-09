@@ -38,8 +38,8 @@
 <a class="skip" href="#main">Skip to content</a>
 <header><nav aria-label="Primary navigation" class="nav container">
 <a aria-label="NEXOR home" class="logo" href="#home">NEXOR<i></i></a>
-<div class="navlinks"><a href="#home">Home</a><a href="#how-it-works">How It Works</a><a href="#experiences">Experiences</a><a href="#companies">For Companies</a><a href="https://nexor.london/contactus/partnership">Become a Partner</a><a href="https://nexor.london/contactus/business">Contact</a></div>
-<div class="navright"><button aria-label="Toggle colour theme" class="icon-btn theme-toggle" title="Switch light/dark mode">☾</button><a class="btn primary" href="/experiences">Explore Experiences <span class="arrow">↗</span></a><button aria-expanded="false" aria-label="Open navigation" class="icon-btn menu-btn">☰</button></div>
+<div class="navlinks"><a href="#home">Home</a><a href="#how-it-works">How It Works</a><a href="#experiences">Experiences</a><a href="#companies">For Companies</a><a href="https://nexor.london/contactus/partnership">Become a Partner</a><a href="https://nexor.london/contactus/business"></a></div>
+<div class="navright"><button aria-label="Toggle colour theme" class="icon-btn theme-toggle" title="Switch light/dark mode"></button><a class="btn primary" href="/experiences">Explore Experiences <span class="arrow">↗</span></a><button aria-expanded="false" aria-label="Open navigation" class="icon-btn menu-btn">☰</button></div>
 </nav><div class="mobile-menu" id="mobile-menu"><a href="#home">Home</a><a href="#how-it-works">How It Works</a><a href="#experiences">Experiences</a><a href="#companies">For Companies</a><a href="https://nexor.london/contactus/partnership">Become a Partner</a><a href="https://nexor.london/contactus/business">Contact</a><a href="/experiences">Explore Experiences ↗</a></div></header>
 <main id="main">
 <section class="hero" id="home"><div aria-label="London skyline at dusk" class="hero-photo" role="img"></div><div class="container hero-content"><div class="eyebrow">Beyond the Boardroom. Within the Square Mile.</div><h1>Your Meetings End.<br/><em>London Begins.</em></h1><p>Turn business trips into unforgettable experiences. NEXOR connects visiting professionals with curated experiences across London's Square Mile.</p><div class="actions"><a class="btn light" href="/experiences">Explore Experiences <span class="arrow">↗</span></a><a class="btn ghost" href="#companies">For Corporate Teams <span class="arrow">→</span></a></div></div><div class="hero-caption"><div class="container"><span class="small-dash"></span>Exclusively in the City of London</div></div></section>
@@ -60,7 +60,7 @@
 <script>
 (() => {
  const root=document.documentElement, toggle=document.querySelector('.theme-toggle'), menuButton=document.querySelector('.menu-btn'), menu=document.querySelector('.mobile-menu');
- function updateTheme(){toggle.textContent=root.dataset.theme==='dark'?'☀':'☾';toggle.setAttribute('aria-label',root.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode')}
+ function updateTheme(){toggle.textContent=root.dataset.theme==='dark'?'':'';toggle.setAttribute('aria-label',root.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode')}
  updateTheme();toggle.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('nexor-theme',root.dataset.theme)}catch(e){}updateTheme()});
  menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰'});
  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
